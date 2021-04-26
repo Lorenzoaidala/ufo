@@ -37,7 +37,7 @@ public class DBprova {
 			String parametroShape = "circle";
 			PreparedStatement st2 = conn.prepareStatement(sql2);
 			st2.setString(1, parametroShape);
-			ResultSet res2 = st2.executeQuery();
+			ResultSet res2 = st2.executeQuery();// con preparedStatement il metodo executeQuery non ha bisogno di parametri
 			res2.first();
 			int count = res2.getInt("cnt");
 			st2.close();
